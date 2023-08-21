@@ -1,6 +1,11 @@
 def twoSum(nums: list[int], target: int) -> list[int]:
     '''
-    Using Dictionary as searching takes O(1)
+    Docstring
+    Using Dictionary as searching takes Time Complexity O(1) and Space Complexity O(n)
+    Saves like value-index string as we need to return index
+    2  | 0
+    next is 7. We'll make a query which finds target-value=9-7=2 which exists
+    return this.index and 2's index.
     '''
     d = dict()
     for index, value in enumerate(nums):
