@@ -4,8 +4,8 @@ def maxProfit(prices: list[int]) -> int:
     currentMin = sys.maxsize
     overallProfit = 0
     for price in prices:
-        currentMin = min(currentMin, price)
-        overallProfit = max(overallProfit, price-currentMin)
+        currentMin = min(currentMin, price) #Finding Minimum and updating as we traverse list
+        overallProfit = max(overallProfit, price-currentMin) #Finding Max by overall profit, not immediate profit
     return overallProfit
 
 def main():
