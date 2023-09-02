@@ -65,7 +65,7 @@ class Solution:
         return output
 
 def main():
-    print(Solution.lenOfLongestSubstring("abcabcbb"))
+    print(Solution.SGS1("abcabcbb"))
 
 if __name__ == '__main__':
     main()
