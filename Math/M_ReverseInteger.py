@@ -9,7 +9,7 @@ class Solution:
         # return num * sign
 
         sign = -1 if num < 0 else 1
-        rev = sign * int(str(abs(num))[::-1])
+        rev = sign * int(str(abs(num))[::-1]) # Reversing the String
         return rev if -(2 ** 31) - 1 < rev < 2 ** 31 else 0
         # sys.maxsize == 9223372036854775807 (Could be used for INTSIZE.MAX but not instead of 2**31)
 
