@@ -1,5 +1,8 @@
 
 def findDuplicate(nums: list[int]) -> int:
+
+    # return sum(nums)-sum([x for x in range(len(nums))]) # 15 Cases Solved Only
+
     s = set()
     for num in nums:
         if num in s:
