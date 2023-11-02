@@ -1,21 +1,33 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+#Definition for singly-linked list.
 
-def mergeTwoLists(a: ListNode, b: ListNode):
-    dummy = temp = ListNode()
+from LL import *
+
+def mergeTwoSortedLists(a, b):
+
+    temp = LinkedList()
 
     while a and b:
         if a.val < b.val:
-            temp.next = a
+            temp.append(a.val)
             a = a.next
         else:
-            temp.next = b
+            temp.append(b.val)
             b = b.next
-        temp = temp.next
 
-    temp.next = a or b
+    temp.nodeAppend(a) if a else temp.nodeAppend(b)
 
-    return dummy.next
+    return temp
+
+
+
+
+def main():
+    LL1 = LinkedList([10,20,30,40])
+    LL2 = LinkedList([5,15,45,50,55])
+    LLR = mergeTwoSortedLists(LL1.head, LL2.head)
+    LLR.pr()
+
+
+
+if __name__ == "__main__":
+    main()
